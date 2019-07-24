@@ -110,9 +110,9 @@ class CarrieController
     {
         $rez = $this->getCarrierByName($carrier);
         if ($rez == null) {
-            echo "not  found";
-            exit();
+            return null;
         }
+
         return $rez->calculateCost($weight);
     }
 }

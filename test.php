@@ -15,7 +15,7 @@ if (!$controller->readCarrier()) {
     exit();
 }
 
-echo $controller->calc("DHL", 100);
+echo $controller->calc("DHL", 1);
 
-
-echo $controller->calc("Почта России", 100);
+echo "\n";
+echo $controller->calc("Почта России", 1000);
