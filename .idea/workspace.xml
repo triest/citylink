@@ -2,9 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dc16fc0f-b14c-4c33-9fe1-51143425051c" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CarrertcontrollerTest.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarrieController.php" beforeDir="false" afterPath="$PROJECT_DIR$/CarrieController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CarrierTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/CarrierTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Сarrier.php" beforeDir="false" afterPath="$PROJECT_DIR$/Сarrier.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -33,20 +35,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CarrierTest.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/CarrierTest.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="367">
-              <caret line="76" column="13" selection-start-line="76" selection-start-column="13" selection-end-line="76" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Сarrier.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Сarrier.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="298">
-              <caret line="135" column="69" selection-start-line="135" selection-start-column="39" selection-end-line="135" selection-end-column="69" />
+            <state relative-caret-position="367">
+              <caret line="148" lean-forward="true" selection-start-line="148" selection-end-line="148" />
             </state>
           </provider>
         </entry>
@@ -54,8 +47,26 @@
       <file leaf-file-name="CarrieController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CarrieController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="401">
-              <caret line="114" lean-forward="true" selection-start-line="114" selection-end-line="114" />
+            <state relative-caret-position="382">
+              <caret line="81" column="33" lean-forward="true" selection-start-line="81" selection-start-column="33" selection-end-line="81" selection-end-column="33" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CarrierTest.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CarrierTest.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-629">
+              <caret line="14" column="31" lean-forward="true" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CarrertcontrollerTest.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/CarrertcontrollerTest.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="499">
+              <caret line="35" column="40" selection-start-line="35" selection-start-column="40" selection-end-line="35" selection-end-column="40" />
             </state>
           </provider>
         </entry>
@@ -64,8 +75,12 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>testType</find>
+      <find>readConnectProperty</find>
       <find>Carrier</find>
+      <find>testType</find>
+      <find>valida</find>
+      <find>connectorValidate</find>
+      <find>setDa</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -78,8 +93,9 @@
         <option value="$PROJECT_DIR$/test.php" />
         <option value="$PROJECT_DIR$/tests/CarrierTest.php" />
         <option value="$PROJECT_DIR$/Сarrier.php" />
-        <option value="$PROJECT_DIR$/CarrieController.php" />
         <option value="$PROJECT_DIR$/CarrierTest.php" />
+        <option value="$PROJECT_DIR$/CarrieController.php" />
+        <option value="$PROJECT_DIR$/CarrertcontrollerTest.php" />
       </list>
     </option>
   </component>
@@ -123,6 +139,7 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.PHP" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -161,7 +178,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1563979949998</updated>
-      <workItem from="1563979951280" duration="12633000" />
+      <workItem from="1563979951280" duration="16478000" />
     </task>
     <task id="LOCAL-00001" summary="Add read data from database. Not final">
       <created>1563984817243</created>
@@ -198,7 +215,14 @@
       <option name="project" value="LOCAL" />
       <updated>1563993379570</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Add test calculate">
+      <created>1563994209385</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1563994209385</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -207,7 +231,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12633000" />
+    <option name="totallyTimeSpent" value="16478000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -217,11 +241,11 @@
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Migrations" />
       <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32946146" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32946146" />
       <window_info anchor="bottom" id="Version Control" />
       <window_info anchor="bottom" id="Terminal" />
       <window_info anchor="right" id="Remote Host" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
       <window_info anchor="right" id="Database" />
       <window_info anchor="bottom" id="Find" order="1" />
@@ -248,7 +272,8 @@
     <MESSAGE value="Add calculate price." />
     <MESSAGE value="Add calc cost" />
     <MESSAGE value="Add tests Carrier class. Not test cost." />
-    <option name="LAST_COMMIT_MESSAGE" value="Add tests Carrier class. Not test cost." />
+    <MESSAGE value="Add test calculate" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add test calculate" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/2.php">
@@ -272,24 +297,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CarrieController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="401">
-          <caret line="114" lean-forward="true" selection-start-line="114" selection-end-line="114" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Сarrier.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="298">
-          <caret line="135" column="69" selection-start-line="135" selection-start-column="39" selection-end-line="135" selection-end-column="69" />
+        <state relative-caret-position="367">
+          <caret line="148" lean-forward="true" selection-start-line="148" selection-end-line="148" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/CarrierTest.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="367">
-          <caret line="76" column="13" selection-start-line="76" selection-start-column="13" selection-end-line="76" selection-end-column="13" />
+        <state relative-caret-position="-629">
+          <caret line="14" column="31" lean-forward="true" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CarrieController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="382">
+          <caret line="81" column="33" lean-forward="true" selection-start-line="81" selection-start-column="33" selection-end-line="81" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CarrertcontrollerTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="499">
+          <caret line="35" column="40" selection-start-line="35" selection-start-column="40" selection-end-line="35" selection-end-column="40" />
         </state>
       </provider>
     </entry>

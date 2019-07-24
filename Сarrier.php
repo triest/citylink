@@ -131,6 +131,10 @@ class Сarrier
 
     public function calculateCost($weight)
     {
+        if ($weight == null or $weight < 0 or !is_numeric($weight)) {
+            return "incorrect weight";
+        }
+
         if ($this->rate_type == "const_every_weight") {
             return $weight * $this->getPriceMinWeight();
         } elseif ($this->rate_type == "price_increase_after_the_limit") {
@@ -139,9 +143,11 @@ class Сarrier
             } else {
                 return $this->getPriceMaxWeight();
             }
+        } else {
+            return 'unknown type';
         }
 
-        return null;
+
     }
 
 

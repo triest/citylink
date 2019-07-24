@@ -79,4 +79,25 @@ class CarrierTest extends TestCase
         $this->assertEquals(1000, $rez);
     }
 
+    //error cases
+    public function testUnknowType()
+    {
+        $carrier = new Сarrier();
+        $carrier->setName("test");
+        $carrier->setRateType("test type");
+        $rez = $carrier->calculateCost(9);
+        $this->assertEquals('unknown type', $rez);
+    }
+
+    public function testIncorrectWeight()
+    {
+        $carrier = new Сarrier();
+        $carrier->setName("test");
+        $carrier->setRateType("test type");
+        $rez = $carrier->calculateCost("rrr");
+        $this->assertEquals('incorrect weight', $rez);
+    }
+
+
+
 }

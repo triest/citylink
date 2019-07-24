@@ -16,15 +16,29 @@ class CarrieController
     private $database;
 
     public $carrier_array = array();
+    private $filename = "connect.txt";
+
+    /**
+     * @param string $filename
+     */
+    public function setFilename(string $filename): void
+    {
+        $this->filename = $filename;
+    }
 
 
     public function __construct()
     {
-        $this->readConnectProperty();
+        $rez = $this->readConnectProperty();
+        if (!$rez) {
+            return $rez->getMessage();
+        }
+
+        return null;
     } //переменныя для считывание ответа от API
 
     //считываеие данных для подключения из файла connect.txt
-    private function readConnectProperty()
+    public function readConnectProperty()
     {
         try {
             if ($file = fopen("connect.txt", "r")) {
@@ -48,11 +62,30 @@ class CarrieController
                     }
                 }
                 fclose($file);
+
+                return true;
             }
         } catch (PDOException $e) {
-            print "Error!: ".$e->getMessage();
-            exit();
+            return $e;
         }
+
+
+    }
+
+
+    public function connectorValidate()
+    {
+        if ($this->host == null) {
+            return "empty host";
+        }
+        if ($this->login == null) {
+            return "empty login";
+        }
+        if ($this->database == null) {
+            return "empty database";
+        }
+
+        return true;
     }
 
     //read carriers from dn
@@ -61,15 +94,7 @@ class CarrieController
         $mysqli = new mysqli($this->host, $this->login, $this->password,
             $this->database);
         if ($mysqli->connect_errno) {
-            echo "Извините, возникла проблема на сайте";
-            // На реальном сайте этого делать не следует, но в качестве примера мы покажем
-            // как распечатывать информацию о подробностях возникшей ошибки MySQL
-            echo "Ошибка: Не удалась создать соединение с базой MySQL и вот почему: \n";
-            echo "Номер ошибки: ".$mysqli->connect_errno."\n";
-            echo "Ошибка: ".$mysqli->connect_error."\n";
-
-            // Вы можете захотеть показать что-то еще, но мы просто выйдем
-            exit;
+            return $mysqli->connect_error;
         }
         $sql = "SELECT * FROM carrier";
         $result = $mysqli->query($sql);
@@ -104,15 +129,73 @@ class CarrieController
                 return $struct;
             }
         }
+
+        return null;
     }
 
     public function calc($carrier, $weight)
     {
         $rez = $this->getCarrierByName($carrier);
         if ($rez == null) {
-            return null;
+            return "carrier not found";
         }
 
         return $rez->calculateCost($weight);
+    }
+
+    /**
+     * @param mixed $host
+     */
+    public function setHost($host): void
+    {
+        $this->host = $host;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getPassword()
+    {
+        return $this->password;
+    }
+
+    /**
+     * @param mixed $password
+     */
+    public function setPassword($password): void
+    {
+        $this->password = $password;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getLogin()
+    {
+        return $this->login;
+    }
+
+    /**
+     * @param mixed $login
+     */
+    public function setLogin($login): void
+    {
+        $this->login = $login;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getDatabase()
+    {
+        return $this->database;
+    }
+
+    /**
+     * @param mixed $database
+     */
+    public function setDatabase($database): void
+    {
+        $this->database = $database;
     }
 }
