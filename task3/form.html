@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<form>
+    <label for="number">Число</label>
+    <input type="text" id="number" name="number" onkeypress="return isNumberKey(event)">
+    <label for="procent">Процент</label>
+    <input type="text" id="procent" name="plz" onkeypress="procentFunct(this);"/>
+
+</form>
+
+
+<script type="text/javascript">
+    function a_value(o) {
+        // alert(o.value);
+        console.log(o.value);
+    }
+</script>
+
+
+<p>When you select a new car, a function is triggered which outputs the value of the selected car.</p>
+
+<p id="demo"></p>
+
+<script>
+    function myFunction() {
+        var x = document.getElementById("mySelect").value;
+        document.getElementById("demo").innerHTML = "You selected: " + x;
+    }
+</script>
+
+<script type="text/javascript">
+
+    function isNumberKey(evt) {
+        let charCode = (evt.which) ? evt.which : event.keyCode;
+        if (charCode > 31 && (charCode < 48 || charCode > 57))
+            return false;
+
+        return true;
+    }
+
+    function procentFunct(o) {
+        //   let charCode = (evt.which) ? evt.which : event.keyCode;
+        /*    if (charCode > 31 && (charCode < 48 || charCode > 57)) {
+                return false;
+            }*/
+        var x = document.getElementById("procent").value;
+
+        
+        console.log("tst");
+    }
+</script>
+
+
+</body>
+</html>
