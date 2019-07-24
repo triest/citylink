@@ -6,10 +6,27 @@
  * Time: 18:06
  */
 
-class Carrier
+class Сarrier
 {
     public $name;
-    public $rate_type; //тип оплаты
+    public $rate_type;
+
+    /**
+     * @return mixed
+     */
+    public function getRateType()
+    {
+        return $this->rate_type;
+    }
+
+    /**
+     * @param mixed $rate_type
+     */
+    public function setRateType($rate_type)
+    {
+        $this->rate_type = $rate_type;
+    } //тип оплаты
+
     public $min_weight;
     public $price_min_weight;
     public $price_max_weight;
@@ -111,5 +128,19 @@ class Carrier
         $this->rez = $rez;
     }
 
+
+    public function calculateCost($weight)
+    {
+        if ($this->rate_type == "const_every_weight") {
+            return $weight * $this->getPriceMinWeight();
+        } elseif ($this->rate_type == "price_increase_after_the_limit") {
+            if ($weight <= $this->getMinWeight()) {
+                return $this->getPriceMinWeight();
+            } else {
+                return $this->setPriceMaxWeight();
+            }
+        }
+        return null;
+    }
 
 }

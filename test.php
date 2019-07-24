@@ -11,4 +11,9 @@ require_once "CarrieController.php";
 
 $controller = new CarrieController();
 
-$controller->readCarrier();
+if (!$controller->readCarrier()) {
+    exit();
+}
+
+$controller->printCarrierArray();
+

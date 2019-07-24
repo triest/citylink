@@ -5,6 +5,7 @@
  * Date: 24.07.2019
  * Time: 18:16
  */
+require_once "Сarrier.php";
 
 class CarrieController
 {
@@ -14,7 +15,8 @@ class CarrieController
     private $login;
     private $database;
 
-    public $carrier_array;
+    public $carrier_array = array();
+
 
     public function __construct()
     {
@@ -56,9 +58,6 @@ class CarrieController
     //read carriers from dn
     public function readCarrier()
     {
-        echo "databese";
-        echo $this->database;
-
         $mysqli = new mysqli($this->host, $this->login, $this->password,
             $this->database);
         if ($mysqli->connect_errno) {
@@ -77,14 +76,34 @@ class CarrieController
         if ($result->num_rows > 0) {
             // output data of each row
             while ($row = $result->fetch_assoc()) {
-                echo "id: ".$row["id"]." - Name: ".$row["name"]." "
-                    .$row["lastname"]."<br>";
+                $carrier = new Сarrier();
+                $carrier->setName($row["name"]);
+                $carrier->setRateType($row["rate_type"]);
+                $carrier->setPriceMinWeight($row["price_min_weight"]);
+                $carrier->setPriceMaxWeight($row["price_max_weight"]);
+                $carrier->setMinWeight($row["min_weight"]);
+                array_push($this->carrier_array, $carrier);
             }
         } else {
-            //   echo "0 results";
+            return false;
         }
         $mysqli->close();
+
+        return true;
     }
 
+    public function printCarrierArray()
+    {
+        print_r($this->carrier_array);
+    }
 
+    public function getCarrierByName()
+    {
+
+    }
+
+    public function calc($carrier, $weight)
+    {
+
+    }
 }
