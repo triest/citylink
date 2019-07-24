@@ -137,9 +137,10 @@ class Сarrier
             if ($weight <= $this->getMinWeight()) {
                 return $this->getPriceMinWeight();
             } else {
-                return $this->setPriceMaxWeight();
+                return $this->getPriceMinWeight();
             }
         }
+
         return null;
     }
 

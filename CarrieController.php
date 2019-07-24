@@ -97,13 +97,22 @@ class CarrieController
         print_r($this->carrier_array);
     }
 
-    public function getCarrierByName()
+    public function getCarrierByName($name)
     {
-
+        foreach ($this->carrier_array as $struct) {
+            if ($name == $struct->name) {
+                return $struct;
+            }
+        }
     }
 
     public function calc($carrier, $weight)
     {
-
+        $rez = $this->getCarrierByName($carrier);
+        if ($rez == null) {
+            echo "not  found";
+            exit();
+        }
+        return $rez->calculateCost($weight);
     }
 }
