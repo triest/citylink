@@ -56,4 +56,27 @@ class CarrierTest extends TestCase
         );
     }
 
+
+    public function testEveryCalculate()
+    {
+        $carrier = new Сarrier();
+        $carrier->setName("test");
+        $carrier->setRateType("const_every_weight");
+        $carrier->setPriceMinWeight(100);
+        $rez = $carrier->calculateCost(9);
+        $this->assertEquals(900, $rez);
+    }
+
+    public function testMinCalculate()
+    {
+        $carrier = new Сarrier();
+        $carrier->setName("test");
+        $carrier->setRateType("price_increase_after_the_limit");
+        $carrier->setPriceMinWeight(1);
+        $carrier->setPriceMaxWeight(1000);
+        $carrier->setMinWeight(8);
+        $rez = $carrier->calculateCost(9);
+        $this->assertEquals(1000, $rez);
+    }
+
 }
