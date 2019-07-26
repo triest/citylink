@@ -14,12 +14,7 @@ use PHPUnit\Framework\TestCase;
 class TimeTest extends TestCase
 {
 
-    public function testValidate()
-    {
-        //incorrect time first interval hour
-        $interval = "25:10-23:10";
-        $this->assertFalse(validate($interval));
-    }
+// correct test
 
     public function test2Validate()
     {
@@ -28,6 +23,14 @@ class TimeTest extends TestCase
         $this->assertTrue(validate($interval));
     }
 
+    public function testIncorrecMinute3Validate()
+    {
+        //incorrect time first interval hour
+        $interval = "01:02-23:50";
+        $this->assertTrue(validate($interval));
+    }
+
+//incorrect test
 
     public function testIncorrecHourValidate()
     {
@@ -51,12 +54,11 @@ class TimeTest extends TestCase
         $this->assertFalse(validate($interval));
     }
 
-    public function testIncorrecMinute3Validate()
+    public function testValidate()
     {
         //incorrect time first interval hour
-        $interval = "01:02-23:50";
-        $this->assertTrue(validate($interval));
+        $interval = "25:10-23:10";
+        $this->assertFalse(validate($interval));
     }
 
-    
 }

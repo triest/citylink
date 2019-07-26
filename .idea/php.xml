@@ -34,9 +34,10 @@
       <path value="$PROJECT_DIR$/POST/vendor/phpdocumentor/reflection-common" />
     </include_path>
   </component>
+  <component name="PhpProjectSharedConfiguration" php_language_level="7.2" />
   <component name="PhpUnit">
     <phpunit_settings>
-      <PhpUnitSettings load_method="CUSTOM_LOADER" custom_loader_path="$PROJECT_DIR$/POST/vendor/autoload.php" />
+      <PhpUnitSettings load_method="CUSTOM_LOADER" custom_loader_path="$PROJECT_DIR$/time/vendor/phpunit/phpunit/phpunit" phpunit_phar_path="" />
     </phpunit_settings>
   </component>
 </project>
