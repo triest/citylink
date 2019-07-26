@@ -47,4 +47,63 @@ $list = array(
     '21:30-22:30',
 );
 
+function validate($interval)
+{
+    // ппроверка формата строки
+    /*if (!preg_match("/^([0-9]|0[0-9]|1[0-9]|2[0-3]):[0-5][0-9]$/", $interval)) {
+        echo "reg";
+        return false;
+    }*/
+
+    $splited = explode("-", $interval);
+    // в массиви 0-начало время 1-окончание
+    /*массив ы\времени*/
+
+    /*разбиваем каждые время на часы ии минуты*/
+    $begin_time = $splited[0];
+    $begin_time = explode(":", $begin_time);
+
+    $end_time = $splited[1];
+    $end_time = explode(":", $end_time);
+
+    // print_r($end_time);
+    /* проверяем часы первого интервала*/
+    if (intval($begin_time[0]) < 0 or intval($begin_time[0]) > 23) {
+        return false;  /* проверка валидности часов первого интервала работает*/
+    }
+
+
+    if (intval($begin_time[1]) < 0 or intval($begin_time[1]) > 59) {
+        return false;  /* проверка валидности минут первого интервала работает*/
+    }
+    /* проверяем часы второго интервала*/
+    if (intval($end_time[0]) < 0 or intval($end_time[0]) > 23) {
+        return false;  /* проверка валидности часов второго интервала работает*/
+    }
+    if (intval($end_time[1]) < 0 or intval($end_time[1]) > 59) {
+        return false;  /* проверка валидности минут второго интервала работает*/
+    }
+
+    /*если они валидны, то смотрим на сими интервалы*/
+    // часы начала больше времени конца
+    if ($begin_time[0] > $end_time[0]) {
+        return false;
+    } elseif
+    ($begin_time[0] == $end_time[0]
+    ) {
+        /*если часы одинаковые, смотрим минуты*/
+        //если минуты начала ьольше минут окончания
+        if ($begin_time[1] > $end_time[1]) {
+            echo "некорректные минуты";
+
+            return false;
+        }
+    }
+
+    // возвращаем положительное значениу
+    return true;
+}
+
+validate("23:40");
+
 ?>
