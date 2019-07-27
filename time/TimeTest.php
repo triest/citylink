@@ -123,14 +123,25 @@ class TimeTest extends TestCase
     //тест наложения
     public function testNalog1()
     {
-        $this->assertEquals("", nalog(array(
+        $list = array(
             '09:00-11:00',
             '11:00-13:00',
             '15:00-16:00',
             '17:00-20:00',
             '20:30-21:30',
             '21:30-22:30',
-        ), '09:00-11:00'));
+        );
+
+
+        $count = count($list);
+        $list = nalog($list, "11:10-11:20");
+        $count2 = count($list);
+        $this->assertEquals($count, $count2);
+
+        $list = nalog($list, "23:10-23:20");
+        $count = $count + 1;
+        $count2 = count($list);
+        $this->assertEquals($count, $count2);
     }
 
 }

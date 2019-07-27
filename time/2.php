@@ -47,6 +47,7 @@ $list = array(
     '21:30-22:30',
 );
 
+
 function validate($interval)
 {
     // ппроверка формата строки
@@ -87,7 +88,7 @@ function validate($interval)
 
 
 /* проверка наложений*/
-function nalog($interval)
+function nalog($list, $interval)
 {
 
     if (!validate($interval)) {
@@ -113,25 +114,26 @@ function nalog($interval)
     $input_nach = $input_nach[0] * 60 + $input_nach[1];
     $input_okon = $input_okon[0] * 60 + $input_okon[1];
 
-    global $list;
+    //global $list;
 
     $nalog = false; //если есть наложение, то true
 
     foreach ($list as $value) {
+
         /* парсим значение в листе*/
         $splited = explode("-", $value);// парсим начало и окончание
-        $nach = explode(":", $splited[0]); // тут часы и минуты начала
-        $nach = $nach[0] * 60 + $nach[1]; //время начала
+        $begin = explode(":", $splited[0]); // тут часы и минуты начала
+        $begin = $begin[0] * 60 + $begin[1]; //время начала
 
-        $okon = explode(":", $splited[1]); // окончание отрезка
-        $okon = $okon[0] * 60 + $okon[1];
+        $end = explode(":", $splited[1]); // окончание отрезка
+        $end = $end[0] * 60 + $end[1];
         /* проверка всех вариантов надожения*/        //все переводим в минуты для удобства сравнения (относительно 00:00)
-        if (($input_nach <= $nach and $input_okon >= $nach and $input_okon
-                < $okon)
+        if (($input_nach <= $begin and $input_okon >= $begin and $input_okon
+                < $end)
             or
-            ($input_nach >= $nach and $input_okon <= $okon)
+            ($input_nach >= $begin and $input_okon <= $end)
             or
-            ($input_nach >= $nach and $input_nach <= $okon)
+            ($input_nach >= $begin and $input_nach <= $end)
         ) {
             echo $interval;
             echo "=> произошло наложение";
@@ -143,19 +145,24 @@ function nalog($interval)
             echo $interval;
             echo "=> наложений нет";
             echo "\r\n";
-            //   array_push($list, $interval);
+            //  array_push($list, $interval);
         }
         /*теперь проверяем*/
     }
+
     if (!$nalog) {
+        echo "false";
         array_push($list, $interval);
     }
+
+    //print_r($list);
+    return $list;
 }
 
-print_r($list);
+/*print_r($list);
 nalog("23:10-23:20");
 print_r($list);
 nalog("23:10-23:20");
 print_r($list);
-
+*/
 ?>
