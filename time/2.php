@@ -50,10 +50,11 @@ $list = array(
 function validate($interval)
 {
     // ппроверка формата строки
-    /*if (!preg_match("/^([0-9]|0[0-9]|1[0-9]|2[0-3]):[0-5][0-9]$/", $interval)) {
-        echo "reg";
+    if (!preg_match("/^(?:[01]\d:[0-5][0-9]|2[0-3]:[0-5][0-9])(?:\s?)-(?:\s?)(?:[01]\d:[0-5][0-9]|2[0-3]:[0-5][0-9])/",
+        $interval)
+    ) {
         return false;
-    }*/
+    }
 
     $splited = explode("-", $interval);
     // в массиви 0-начало время 1-окончание
@@ -66,12 +67,10 @@ function validate($interval)
     $end_time = $splited[1];
     $end_time = explode(":", $end_time);
 
-    // print_r($end_time);
     /* проверяем часы первого интервала*/
     if (intval($begin_time[0]) < 0 or intval($begin_time[0]) > 23) {
         return false;  /* проверка валидности часов первого интервала работает*/
     }
-
 
     if (intval($begin_time[1]) < 0 or intval($begin_time[1]) > 59) {
         return false;  /* проверка валидности минут первого интервала работает*/

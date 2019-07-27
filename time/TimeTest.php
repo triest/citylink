@@ -61,4 +61,24 @@ class TimeTest extends TestCase
         $this->assertFalse(validate($interval));
     }
 
+    public function testValidate3()
+    {
+        //incorrect time first interval hour
+        $interval = "22:10 23:10";
+        $this->assertFalse(validate($interval));
+    }
+
+    public function testValidate4()
+    {
+        //incorrect time first interval hour
+        $interval = "22:10-21:10";
+        $this->assertFalse(validate($interval));
+    }
+
+    public function testValidate5()
+    {
+        //incorrect time first interval hour
+        $interval = "22:10-21:09";
+        $this->assertFalse(validate($interval));
+    }
 }
