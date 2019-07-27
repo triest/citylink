@@ -67,22 +67,6 @@ function validate($interval)
     $end_time = $splited[1];
     $end_time = explode(":", $end_time);
 
-    /* проверяем часы первого интервала*/
-    if (intval($begin_time[0]) < 0 or intval($begin_time[0]) > 23) {
-        return false;  /* проверка валидности часов первого интервала работает*/
-    }
-
-    if (intval($begin_time[1]) < 0 or intval($begin_time[1]) > 59) {
-        return false;  /* проверка валидности минут первого интервала работает*/
-    }
-    /* проверяем часы второго интервала*/
-    if (intval($end_time[0]) < 0 or intval($end_time[0]) > 23) {
-        return false;  /* проверка валидности часов второго интервала работает*/
-    }
-    if (intval($end_time[1]) < 0 or intval($end_time[1]) > 59) {
-        return false;  /* проверка валидности минут второго интервала работает*/
-    }
-
     /*если они валидны, то смотрим на сими интервалы*/
     // часы начала больше времени конца
     if ($begin_time[0] > $end_time[0]) {
@@ -93,8 +77,6 @@ function validate($interval)
         /*если часы одинаковые, смотрим минуты*/
         //если минуты начала ьольше минут окончания
         if ($begin_time[1] > $end_time[1]) {
-            echo "некорректные минуты";
-
             return false;
         }
     }
