@@ -3,9 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="556ed56b-0825-4e2d-bde0-92e9ede99e0d" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task3/form.html" beforeDir="false" afterPath="$PROJECT_DIR$/task3/form.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/time/2.php" beforeDir="false" afterPath="$PROJECT_DIR$/time/2.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/time/TimeTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/time/TimeTest.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -27,8 +25,8 @@
       <file leaf-file-name="2.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/time/2.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="414">
-              <caret line="146" column="5" lean-forward="true" selection-start-line="146" selection-start-column="5" selection-end-line="146" selection-end-column="5" />
+            <state relative-caret-position="312">
+              <caret line="128" column="41" lean-forward="true" selection-start-line="128" selection-start-column="41" selection-end-line="128" selection-end-column="41" />
               <folding>
                 <element signature="e#7#1096#0#PHP" expanded="true" />
               </folding>
@@ -248,7 +246,7 @@
       <workItem from="1564163526979" duration="9818000" />
       <workItem from="1564216112660" duration="7038000" />
       <workItem from="1564241957118" duration="599000" />
-      <workItem from="1564243458663" duration="8324000" />
+      <workItem from="1564243458663" duration="8459000" />
     </task>
     <task id="LOCAL-00001" summary="form not final">
       <created>1564010691295</created>
@@ -306,7 +304,14 @@
       <option name="project" value="LOCAL" />
       <updated>1564240988225</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Fix function nalog">
+      <created>1564255047829</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1564255047829</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -339,7 +344,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="43248000" />
+    <option name="totallyTimeSpent" value="43383000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -383,7 +388,8 @@
     <MESSAGE value="Fix sql qwery" />
     <MESSAGE value="Add use regular expression for interval validate" />
     <MESSAGE value="Delete unnecessary code" />
-    <option name="LAST_COMMIT_MESSAGE" value="Delete unnecessary code" />
+    <MESSAGE value="Fix function nalog" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix function nalog" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -633,8 +639,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/time/2.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="146" column="5" lean-forward="true" selection-start-line="146" selection-start-column="5" selection-end-line="146" selection-end-column="5" />
+        <state relative-caret-position="312">
+          <caret line="128" column="41" lean-forward="true" selection-start-line="128" selection-start-column="41" selection-end-line="128" selection-end-column="41" />
           <folding>
             <element signature="e#7#1096#0#PHP" expanded="true" />
           </folding>

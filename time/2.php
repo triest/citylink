@@ -115,7 +115,7 @@ function nalog($interval)
 
     global $list;
 
-    $nalog = false;
+    $nalog = false; //если есть наложение, то true
 
     foreach ($list as $value) {
         /* парсим значение в листе*/
@@ -126,12 +126,12 @@ function nalog($interval)
         $okon = explode(":", $splited[1]); // окончание отрезка
         $okon = $okon[0] * 60 + $okon[1];
         /* проверка всех вариантов надожения*/        //все переводим в минуты для удобства сравнения (относительно 00:00)
-        if (($input_nach < $nach and $input_okon > $nach and $input_okon
+        if (($input_nach <= $nach and $input_okon >= $nach and $input_okon
                 < $okon)
             or
-            ($input_nach > $nach and $input_okon < $okon)
+            ($input_nach >= $nach and $input_okon <= $okon)
             or
-            ($input_nach > $nach and $input_nach < $okon)
+            ($input_nach >= $nach and $input_nach <= $okon)
         ) {
             echo $interval;
             echo "=> произошло наложение";
@@ -155,6 +155,7 @@ function nalog($interval)
 print_r($list);
 nalog("23:10-23:20");
 print_r($list);
-
+nalog("23:10-23:20");
+print_r($list);
 
 ?>
