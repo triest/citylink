@@ -85,6 +85,76 @@ function validate($interval)
     return true;
 }
 
-validate("23:40");
+
+/* проверка наложений*/
+function nalog($interval)
+{
+
+    if (!validate($interval)) {
+        return false;
+    }
+
+    /*************************/
+    /*парсим входную строку
+    */
+    $splited = explode("-", $interval);
+
+
+    /*разбиваем  время на часы ии минуты*/
+    $input_nach = $splited[0];
+    $input_nach = explode(":", $input_nach);
+    /*окончание*/
+    $input_okon = $splited[1];
+    $input_okon = explode(":", $input_okon);
+
+
+    /*************************/
+    /*попробуем перевести все в минутв*/
+    $input_nach = $input_nach[0] * 60 + $input_nach[1];
+    $input_okon = $input_okon[0] * 60 + $input_okon[1];
+
+    global $list;
+
+    $nalog = false;
+
+    foreach ($list as $value) {
+        /* парсим значение в листе*/
+        $splited = explode("-", $value);// парсим начало и окончание
+        $nach = explode(":", $splited[0]); // тут часы и минуты начала
+        $nach = $nach[0] * 60 + $nach[1]; //время начала
+
+        $okon = explode(":", $splited[1]); // окончание отрезка
+        $okon = $okon[0] * 60 + $okon[1];
+        /* проверка всех вариантов надожения*/        //все переводим в минуты для удобства сравнения (относительно 00:00)
+        if (($input_nach < $nach and $input_okon > $nach and $input_okon
+                < $okon)
+            or
+            ($input_nach > $nach and $input_okon < $okon)
+            or
+            ($input_nach > $nach and $input_nach < $okon)
+        ) {
+            echo $interval;
+            echo "=> произошло наложение";
+            echo "\r\n";
+            $nalog = true;
+
+        } else {
+            /*добавляем в массив*/
+            echo $interval;
+            echo "=> наложений нет";
+            echo "\r\n";
+            //   array_push($list, $interval);
+        }
+        /*теперь проверяем*/
+    }
+    if (!$nalog) {
+        array_push($list, $interval);
+    }
+}
+
+print_r($list);
+nalog("23:10-23:20");
+print_r($list);
+
 
 ?>

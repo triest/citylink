@@ -14,7 +14,30 @@ use PHPUnit\Framework\TestCase;
 class TimeTest extends TestCase
 {
 
+    static $list
+        = array(
+            '09:00-11:00',
+            '11:00-13:00',
+            '15:00-16:00',
+            '17:00-20:00',
+            '20:30-21:30',
+            '21:30-22:30',
+        );
+
 // correct test
+
+    public function list()
+    {
+        return $list
+            = array(
+            '09:00-11:00',
+            '11:00-13:00',
+            '15:00-16:00',
+            '17:00-20:00',
+            '20:30-21:30',
+            '21:30-22:30',
+        );
+    }
 
     public function test2Validate()
     {
@@ -95,4 +118,19 @@ class TimeTest extends TestCase
         $interval = "2:10-23:09";
         $this->assertFalse(validate($interval));
     }
+
+
+    //тест наложения
+    public function testNalog1()
+    {
+        $this->assertEquals("", nalog(array(
+            '09:00-11:00',
+            '11:00-13:00',
+            '15:00-16:00',
+            '17:00-20:00',
+            '20:30-21:30',
+            '21:30-22:30',
+        ), '09:00-11:00'));
+    }
+
 }

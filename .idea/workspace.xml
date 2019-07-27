@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="556ed56b-0825-4e2d-bde0-92e9ede99e0d" name="Default" comment="Delete unnecessary code">
+    <list default="true" id="556ed56b-0825-4e2d-bde0-92e9ede99e0d" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task3/form.html" beforeDir="false" afterPath="$PROJECT_DIR$/task3/form.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/time/2.php" beforeDir="false" afterPath="$PROJECT_DIR$/time/2.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/time/TimeTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/time/TimeTest.php" afterDir="false" />
     </list>
@@ -18,20 +19,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="generate.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/task 2/generate.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="680">
-              <caret line="45" column="5" selection-start-line="45" selection-start-column="5" selection-end-line="45" selection-end-column="5" />
-            </state>
-          </provider>
+      <file leaf-file-name="test.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/task 1/test.php">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file leaf-file-name="2.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/time/2.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="590">
-              <caret line="77" column="51" selection-start-line="77" selection-start-column="51" selection-end-line="77" selection-end-column="51" />
+            <state relative-caret-position="414">
+              <caret line="146" column="5" lean-forward="true" selection-start-line="146" selection-start-column="5" selection-end-line="146" selection-end-column="5" />
+              <folding>
+                <element signature="e#7#1096#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -39,8 +39,17 @@
       <file leaf-file-name="TimeTest.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/time/TimeTest.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="658">
-              <caret line="89" column="5" lean-forward="true" selection-start-line="89" selection-start-column="5" selection-end-line="89" selection-end-column="5" />
+            <state relative-caret-position="448">
+              <caret line="130" column="26" lean-forward="true" selection-start-line="130" selection-start-column="26" selection-end-line="130" selection-end-column="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="test.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/time/test.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="41" selection-start-column="1" selection-end-column="42" />
             </state>
           </provider>
         </entry>
@@ -62,7 +71,6 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/task 3/form.html" />
-        <option value="$PROJECT_DIR$/task3/form.html" />
         <option value="$PROJECT_DIR$/task3/formNumber.js" />
         <option value="$PROJECT_DIR$/time/temeTest.php" />
         <option value="$PROJECT_DIR$/time/test" />
@@ -71,6 +79,7 @@
         <option value="$PROJECT_DIR$/task 2/2.txt" />
         <option value="$PROJECT_DIR$/task 2/2.sql" />
         <option value="$PROJECT_DIR$/task 2/generate.php" />
+        <option value="$PROJECT_DIR$/task3/form.html" />
         <option value="$PROJECT_DIR$/time/TimeTest.php" />
         <option value="$PROJECT_DIR$/time/2.php" />
       </list>
@@ -151,6 +160,11 @@
             <path>
               <item name="citylink" type="b2602c69:ProjectViewProjectNode" />
               <item name="citylink" type="462c0819:PsiDirectoryNode" />
+              <item name="task3" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="citylink" type="b2602c69:ProjectViewProjectNode" />
+              <item name="citylink" type="462c0819:PsiDirectoryNode" />
               <item name="time" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -184,10 +198,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="PHPUnit.TimeTest.test2Validate">
-    <configuration name="CarrierTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="CarrierTest" file="$PROJECT_DIR$/task 1/CarrierTest.php" scope="Class" />
-    </configuration>
+  <component name="RunManager" selected="PHPUnit.TimeTest.testNalog1">
     <configuration name="TimeTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
       <TestRunner class="TimeTest" file="$PROJECT_DIR$/time/TimeTest.php" scope="Class" />
     </configuration>
@@ -197,23 +208,26 @@
     <configuration name="TimeTest.testIncorrecHourValidate" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
       <TestRunner class="TimeTest" file="$PROJECT_DIR$/time/TimeTest.php" method="testIncorrecHourValidate" scope="Method" />
     </configuration>
+    <configuration name="TimeTest.testNalog1" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="TimeTest" file="$PROJECT_DIR$/time/TimeTest.php" method="testNalog1" scope="Method" />
+    </configuration>
     <configuration name="TimeTest.testValidate" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
       <TestRunner class="TimeTest" file="$PROJECT_DIR$/time/TimeTest.php" method="testValidate" scope="Method" />
     </configuration>
     <list>
-      <item itemvalue="PHPUnit.CarrierTest" />
       <item itemvalue="PHPUnit.TimeTest.testValidate" />
       <item itemvalue="PHPUnit.TimeTest.testIncorrecHourValidate" />
       <item itemvalue="PHPUnit.TimeTest" />
       <item itemvalue="PHPUnit.TimeTest.test2Validate" />
+      <item itemvalue="PHPUnit.TimeTest.testNalog1" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="PHPUnit.TimeTest.testNalog1" />
         <item itemvalue="PHPUnit.TimeTest.test2Validate" />
         <item itemvalue="PHPUnit.TimeTest.testValidate" />
         <item itemvalue="PHPUnit.TimeTest" />
         <item itemvalue="PHPUnit.TimeTest.testIncorrecHourValidate" />
-        <item itemvalue="PHPUnit.CarrierTest" />
       </list>
     </recent_temporary>
   </component>
@@ -232,7 +246,9 @@
       <workItem from="1564046285293" duration="4121000" />
       <workItem from="1564075816378" duration="8506000" />
       <workItem from="1564163526979" duration="9818000" />
-      <workItem from="1564216112660" duration="6539000" />
+      <workItem from="1564216112660" duration="7038000" />
+      <workItem from="1564241957118" duration="599000" />
+      <workItem from="1564243458663" duration="8324000" />
     </task>
     <task id="LOCAL-00001" summary="form not final">
       <created>1564010691295</created>
@@ -283,7 +299,14 @@
       <option name="project" value="LOCAL" />
       <updated>1564239189760</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Delete unnecessary code">
+      <created>1564240988225</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1564240988225</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -308,9 +331,15 @@
     <history-entry file="TimeTest_test2Validate - 2019.07.26 at 21h 34m 45s.xml">
       <configuration name="TimeTest.test2Validate" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
+    <history-entry file="TimeTest_testNalog1 - 2019.07.27 at 20h 51m 03s.xml">
+      <configuration name="TimeTest.testNalog1" configurationId="PHPUnitRunConfigurationType" />
+    </history-entry>
+    <history-entry file="TimeTest_testNalog1 - 2019.07.27 at 21h 04m 08s.xml">
+      <configuration name="TimeTest.testNalog1" configurationId="PHPUnitRunConfigurationType" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="33826000" />
+    <option name="totallyTimeSpent" value="43248000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -321,10 +350,10 @@
       <window_info anchor="bottom" id="Migrations" order="7" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32946146" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32946146" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info anchor="right" id="Remote Host" order="3" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -353,7 +382,8 @@
     <MESSAGE value="add files for test" />
     <MESSAGE value="Fix sql qwery" />
     <MESSAGE value="Add use regular expression for interval validate" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add use regular expression for interval validate" />
+    <MESSAGE value="Delete unnecessary code" />
+    <option name="LAST_COMMIT_MESSAGE" value="Delete unnecessary code" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -362,6 +392,40 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/task 1/test.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/task3/formNumber.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="18" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/task3/form.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="30" selection-start-line="30" selection-end-line="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/task 1/test.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/task3/formNumber.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="18" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/task3/form.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/task 2/generate.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="680">
@@ -387,9 +451,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2856">
           <caret line="200" column="1" lean-forward="true" selection-start-line="200" selection-start-column="1" selection-end-line="200" selection-end-column="1" />
-          <folding>
-            <element signature="n#readConnectProperty#0;n#CarrieController#0;n#!!top" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -470,20 +531,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/task3/formNumber.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="18" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/task3/test.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="3" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/time/vendor/bin/phpunit">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -503,13 +550,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/time/composer.json">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/task3/form.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" selection-start-line="24" selection-end-line="24" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/task 1/CarrertcontrollerTest.php">
       <provider selected="true" editor-type-id="text-editor">
@@ -543,23 +583,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="845">
           <caret line="200" column="1" selection-start-line="200" selection-start-column="1" selection-end-line="200" selection-end-column="1" />
-          <folding>
-            <element signature="n#readConnectProperty#0;n#CarrieController#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/time/test.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="1" selection-start-column="1" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/time/TimeTest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="658">
-          <caret line="89" column="5" lean-forward="true" selection-start-line="89" selection-start-column="5" selection-end-line="89" selection-end-column="5" />
         </state>
       </provider>
     </entry>
@@ -570,10 +593,51 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/task3/test.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="3" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/task3/form.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="16" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/time/test.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="41" selection-start-column="1" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/task3/formNumber.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="18" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/task 1/test.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/time/TimeTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="448">
+          <caret line="130" column="26" lean-forward="true" selection-start-line="130" selection-start-column="26" selection-end-line="130" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/time/2.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="590">
-          <caret line="77" column="51" selection-start-line="77" selection-start-column="51" selection-end-line="77" selection-end-column="51" />
+        <state relative-caret-position="414">
+          <caret line="146" column="5" lean-forward="true" selection-start-line="146" selection-start-column="5" selection-end-line="146" selection-end-column="5" />
+          <folding>
+            <element signature="e#7#1096#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
