@@ -10,7 +10,7 @@ vendor\bin\phpunit  --verbose CarrierTest <br>
 vendor\bin\phpunit  --verbose CarrertcontrollerTest
 <br><br>
 **Задание 2.** <br> 
-Директория: task 1. <br> 
+Директория: task 2. <br> 
 В файле connect.txt настроить подключение к базе данных. <br> 
 Запуск скрипта для создания таблиц: php generate.php
 
