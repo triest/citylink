@@ -40,7 +40,19 @@ class CarrertcontrollerTest extends TestCase
     public function testreadCarrier()
     {
         $carrierController = new CarrieController();
-        $this->assertEquals(!true, $carrierController->readCarrier());
+        $this->assertEquals(true, $carrierController->readCarrier());
+    }
+
+
+    public function testCalculate()
+    {
+        $controller = new CarrieController();
+        $controller->readCarrier();
+        $this->assertEquals(100, $controller->calc("Почта России", 9));
+
+        $this->assertEquals(1000, $controller->calc("Почта России", 11));
+
+        $this->assertEquals(900, $controller->calc("DHL", 9));
     }
 
 }

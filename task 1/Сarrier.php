@@ -10,6 +10,7 @@ class Сarrier
 {
     public $name;
     public $rate_type;
+    public $type;
 
     /**
      * @return mixed

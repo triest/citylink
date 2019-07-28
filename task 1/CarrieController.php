@@ -77,8 +77,6 @@ class CarrieController
 
             return false;
         }
-
-
     }
 
 
@@ -106,6 +104,10 @@ class CarrieController
     }
 
     //read carriers from dn
+
+    /**
+     * @return bool
+     */
     public function readCarrier()
     {
         if (!$this->connectorValidate()) {
@@ -126,14 +128,18 @@ class CarrieController
         if ($result) {
             if ($result->num_rows > 0) {
                 // output data of each row
-                while ($row = $result->fetch_assoc()) {
-                    $carrier = new Сarrier();
-                    $carrier->setName($row["name"]);
-                    $carrier->setRateType($row["rate_type"]);
-                    $carrier->setPriceMinWeight($row["price_min_weight"]);
-                    $carrier->setPriceMaxWeight($row["price_max_weight"]);
-                    $carrier->setMinWeight($row["min_weight"]);
-                    array_push($this->carrier_array, $carrier);
+                try {
+                    while ($row = $result->fetch_assoc()) {
+                        $carrier = new Сarrier();
+                        $carrier->setName($row["name"]);
+                        $carrier->setRateType($row["rate_type"]);
+                        $carrier->setPriceMinWeight($row["price_min_weight"]);
+                        $carrier->setPriceMaxWeight($row["price_max_weight"]);
+                        $carrier->setMinWeight($row["min_weight"]);
+                        array_push($this->carrier_array, $carrier);
+                    }
+                } catch (PDOException $e) {
+                    $this->writeLog($e);
                 }
             } else {
                 return false;
@@ -144,11 +150,6 @@ class CarrieController
         }
 
         return true;
-    }
-
-    public function printCarrierArray()
-    {
-        print_r($this->carrier_array);
     }
 
     public function getCarrierByName($name)

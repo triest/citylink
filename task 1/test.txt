@@ -1,1 +1,2 @@
 vendor\bin\phpunit  --verbose CarrierTest
+vendor\bin\phpunit  --verbose CarrertcontrollerTest
