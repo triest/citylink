@@ -159,10 +159,4 @@ function nalog($list, $interval)
     return $list;
 }
 
-/*print_r($list);
-nalog("23:10-23:20");
-print_r($list);
-nalog("23:10-23:20");
-print_r($list);
-*/
 ?>
