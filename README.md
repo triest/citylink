@@ -1,25 +1,27 @@
 "# citylink" 
 
-1. Задание 1.  <br>
+<b>Задание 1.</b>  <br>
 Директория: task 1. <br> 
 В файле connect.txt настроить подключение к базе данных. 
-Запуск скрипты для создания таблиц: php generate.php
+Запуск скрипта для создания таблиц: php generate.php
 
 Запуск тестов:  <br>
 vendor\bin\phpunit  --verbose CarrierTest <br>
 vendor\bin\phpunit  --verbose CarrertcontrollerTest
-<br>
-Задание 2. <br> 
+<br><br>
+**Задание 2.** <br> 
 Директория: task 1. <br> 
 В файле connect.txt настроить подключение к базе данных. <br> 
 Запуск скрипта для создания таблиц: php generate.php
 
+Запросы в файле 2.sql 
+
 <br>
-Задание 3. <br>
+<b>Задание 3.</b> <br>
 Директория: task3. 
 
-
-Задание со временем: <br> 
+<br><br>
+<b>Задание со временем:</b> <br> 
 Директория: time.
 
 Запуск тестов: 
