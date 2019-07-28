@@ -5,7 +5,7 @@
  * Date: 26.07.2019
  * Time: 23:58
  */
-/*
+
 class CreateDatabase
 {
 
@@ -70,25 +70,22 @@ class CreateDatabase
         } catch (PDOException $e) {
             return $e;
         }
+
+        return null;
     }
 }
+
 
 $database = new CreateDatabase();
 
 $database->readConnectProperty();
 $dbh = new PDO("mysql:host=".$database->getHost()
     .";dbname="
-    .$database->getDatabase().",".
-    "root".",".
+    .$database->getDatabase(), $database->getLogin(),
     $database->getPassword());
 $query = file_get_contents("publishing.sql");
 $stmt = $dbh->prepare($query);
 $stmt->execute();
-*/
 
 
-$db = new PDO("mysql:host=127.0.0.1;dbname=publishing2", "root", "");
-$sql = file_get_contents('publishing.sql');
-
-$qr = $db->exec($sql);
 
