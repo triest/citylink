@@ -35,7 +35,12 @@ class CarrertcontrollerTest extends TestCase
         $carrierController->setLogin("");
         $this->assertEquals("empty login",
             $carrierController->connectorValidate());
+    }
 
+    public function testreadCarrier()
+    {
+        $carrierController = new CarrieController();
+        $this->assertEquals(!true, $carrierController->readCarrier());
     }
 
 }

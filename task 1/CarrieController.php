@@ -27,21 +27,26 @@ class CarrieController
     }
 
 
+    /**
+     * CarrieController constructor.
+     */
     public function __construct()
     {
         $rez = $this->readConnectProperty();
-        if (!$rez) {
-            return $rez->getMessage();
+        if (!$rez == true) {
+            // return $rez->getMessage();
+            exit();
         }
 
-        return null;
     } //переменныя для считывание ответа от API
 
     //считываеие данных для подключения из файла connect.txt
     public function readConnectProperty()
     {
         try {
-            if ($file = fopen("connect.txt", "r")) {
+            if (file_exists("connect.txt")
+                && $file = fopen("connect.txt", "r")
+            ) {
                 while ($line = fgets($file)) {
                     $arr = explode("=", $line);
                     if ($arr[0] == "host") {
@@ -64,9 +69,13 @@ class CarrieController
                 fclose($file);
 
                 return true;
+            } else {
+                $this->writeLog("file not fund");
             }
         } catch (PDOException $e) {
-            return $e;
+            $this->writeLog($e);
+
+            return false;
         }
 
 
@@ -88,31 +97,51 @@ class CarrieController
         return true;
     }
 
+    private function writeLog($error)
+    {
+        $date = new \DateTime('now');
+        file_put_contents('errors.txt', implode(
+            "\n".$date->format('D M d, Y G:i')." "."error:".$error."\n",
+            FILE_APPEND));
+    }
+
     //read carriers from dn
     public function readCarrier()
     {
+        if (!$this->connectorValidate()) {
+            $this->writeLog($this->connectorValidate());
+
+            return false;
+        }
+
         $mysqli = new mysqli($this->host, $this->login, $this->password,
             $this->database);
         if ($mysqli->connect_errno) {
-            return $mysqli->connect_error;
+            $this->writeLog($mysqli->connect_error);
+
+            return false;
         }
         $sql = "SELECT * FROM carrier";
         $result = $mysqli->query($sql);
-        if ($result->num_rows > 0) {
-            // output data of each row
-            while ($row = $result->fetch_assoc()) {
-                $carrier = new Сarrier();
-                $carrier->setName($row["name"]);
-                $carrier->setRateType($row["rate_type"]);
-                $carrier->setPriceMinWeight($row["price_min_weight"]);
-                $carrier->setPriceMaxWeight($row["price_max_weight"]);
-                $carrier->setMinWeight($row["min_weight"]);
-                array_push($this->carrier_array, $carrier);
+        if ($result) {
+            if ($result->num_rows > 0) {
+                // output data of each row
+                while ($row = $result->fetch_assoc()) {
+                    $carrier = new Сarrier();
+                    $carrier->setName($row["name"]);
+                    $carrier->setRateType($row["rate_type"]);
+                    $carrier->setPriceMinWeight($row["price_min_weight"]);
+                    $carrier->setPriceMaxWeight($row["price_max_weight"]);
+                    $carrier->setMinWeight($row["min_weight"]);
+                    array_push($this->carrier_array, $carrier);
+                }
+            } else {
+                return false;
             }
+            $mysqli->close();
         } else {
-            return false;
+            $this->writeLog($mysqli->error);
         }
-        $mysqli->close();
 
         return true;
     }
