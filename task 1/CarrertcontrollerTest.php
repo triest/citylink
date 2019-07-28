@@ -53,6 +53,11 @@ class CarrertcontrollerTest extends TestCase
         $this->assertEquals(1000, $controller->calc("Почта России", 11));
 
         $this->assertEquals(900, $controller->calc("DHL", 9));
+
+        $this->assertEquals(404, $controller->calc("нет такого", 9));
+
+        $this->assertEquals("incorrect weight", $controller->calc("DHL", "j"));
     }
+
 
 }

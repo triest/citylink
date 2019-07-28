@@ -14,7 +14,6 @@ class CarrieController
     private $password;
     private $login;
     private $database;
-
     public $carrier_array = array();
     private $filename = "connect.txt";
 
@@ -163,11 +162,60 @@ class CarrieController
         return null;
     }
 
+    //ищиv конкретного перевозчика в базе дынныхю;
+    public function findCarrieByNameInDatabase($name)
+    {
+        if (!$this->connectorValidate()) {
+            $this->writeLog($this->connectorValidate());
+
+            return false;
+        }
+
+        $mysqli = new mysqli($this->host, $this->login, $this->password,
+            $this->database);
+        if ($mysqli->connect_errno) {
+            $this->writeLog($mysqli->connect_error);
+
+            return false;
+        }
+
+        $stmt = $mysqli->prepare("SELECT * FROM carrier where name=? limit 1");
+        $stmt->bind_param("s", $name);
+        $stmt->execute();
+        $result = $stmt->get_result();
+        if ($result) {
+            if ($result->num_rows > 0) {
+                // output data of each row
+                try {
+                    while ($row = $result->fetch_assoc()) {
+                        $carrier = new Сarrier();
+                        $carrier->setName($row["name"]);
+                        $carrier->setRateType($row["rate_type"]);
+                        $carrier->setPriceMinWeight($row["price_min_weight"]);
+                        $carrier->setPriceMaxWeight($row["price_max_weight"]);
+                        $carrier->setMinWeight($row["min_weight"]);
+
+                        //   array_push($this->carrier_array, $carrier);
+                        return $carrier;
+                    }
+                } catch (PDOException $e) {
+                    $this->writeLog($e);
+
+                    return null;
+                }
+
+            }
+        }
+
+        return null;
+    }
+
     public function calc($carrier, $weight)
     {
-        $rez = $this->getCarrierByName($carrier);
+        //   $rez = $this->getCarrierByName($carrier);
+        $rez = $this->findCarrieByNameInDatabase($carrier);
         if ($rez == null) {
-            return "carrier not found";
+            return 404;
         }
 
         return $rez->calculateCost($weight);
@@ -176,7 +224,7 @@ class CarrieController
     /**
      * @param mixed $host
      */
-    public function setHost($host): void
+    public function setHost($host)
     {
         $this->host = $host;
     }
