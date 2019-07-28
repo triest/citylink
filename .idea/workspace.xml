@@ -3,11 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="556ed56b-0825-4e2d-bde0-92e9ede99e0d" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task 1/2.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/task 1/CarrertcontrollerTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/task 1/CarrertcontrollerTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task 1/CarrieController.php" beforeDir="false" afterPath="$PROJECT_DIR$/task 1/CarrieController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task 1/connect.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/time/2.php" beforeDir="false" afterPath="$PROJECT_DIR$/time/2.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task3/form.html" beforeDir="false" afterPath="$PROJECT_DIR$/task3/form.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task3/test.php" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -24,26 +21,26 @@
       <file leaf-file-name="test.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/task 1/test.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+            <state relative-caret-position="340">
+              <caret line="20" column="45" lean-forward="true" selection-start-line="20" selection-start-column="45" selection-end-line="20" selection-end-column="45" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CarrieController.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/task 1/CarrieController.php">
+      <file leaf-file-name="form.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/task3/form.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="116" column="46" selection-start-line="116" selection-start-column="46" selection-end-line="116" selection-end-column="46" />
+            <state relative-caret-position="493">
+              <caret line="29" column="59" selection-start-line="29" selection-start-column="59" selection-end-line="29" selection-end-column="59" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CarrertcontrollerTest.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/task 1/CarrertcontrollerTest.php">
+      <file leaf-file-name="formNumber.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/task3/formNumber.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="697">
-              <caret line="41" column="52" selection-start-line="41" selection-start-column="52" selection-end-line="41" selection-end-column="52" />
+            <state relative-caret-position="136">
+              <caret line="8" column="18" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -79,13 +76,13 @@
         <option value="$PROJECT_DIR$/task 2/2.txt" />
         <option value="$PROJECT_DIR$/task 2/2.sql" />
         <option value="$PROJECT_DIR$/task 2/generate.php" />
-        <option value="$PROJECT_DIR$/task3/form.html" />
         <option value="$PROJECT_DIR$/time/TimeTest.php" />
         <option value="$PROJECT_DIR$/task 1/test.txt" />
         <option value="$PROJECT_DIR$/time/test.txt" />
         <option value="$PROJECT_DIR$/time/2.php" />
         <option value="$PROJECT_DIR$/task 1/CarrertcontrollerTest.php" />
         <option value="$PROJECT_DIR$/task 1/CarrieController.php" />
+        <option value="$PROJECT_DIR$/task3/form.html" />
       </list>
     </option>
   </component>
@@ -255,7 +252,7 @@
       <workItem from="1564241957118" duration="599000" />
       <workItem from="1564243458663" duration="12850000" />
       <workItem from="1564263034276" duration="604000" />
-      <workItem from="1564301661201" duration="5844000" />
+      <workItem from="1564301661201" duration="7128000" />
     </task>
     <task id="LOCAL-00001" summary="form not final">
       <created>1564010691295</created>
@@ -348,7 +345,14 @@
       <option name="project" value="LOCAL" />
       <updated>1564311096895</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Add errors log.">
+      <created>1564316874068</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1564316874068</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -381,7 +385,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="54222000" />
+    <option name="totallyTimeSpent" value="55506000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -398,6 +402,7 @@
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32946146" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
@@ -407,7 +412,6 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -430,7 +434,8 @@
     <MESSAGE value="Add test nalog function" />
     <MESSAGE value="Fix function nalog2" />
     <MESSAGE value="Add test lauch commands" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add test lauch commands" />
+    <MESSAGE value="Add errors log." />
+    <option name="LAST_COMMIT_MESSAGE" value="Add errors log." />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -667,20 +672,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/task3/test.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="3" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/task3/formNumber.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="18" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/task 1/CarrierTest.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="493">
@@ -706,13 +697,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="13" column="14" selection-start-line="13" selection-start-column="6" selection-end-line="13" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/task3/form.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="16" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
         </state>
       </provider>
     </entry>
@@ -753,10 +737,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/task3/test.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="3" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/task 1/test.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+        <state relative-caret-position="340">
+          <caret line="20" column="45" lean-forward="true" selection-start-line="20" selection-start-column="45" selection-end-line="20" selection-end-column="45" />
         </state>
       </provider>
     </entry>
@@ -764,6 +755,20 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
           <caret line="116" column="46" selection-start-line="116" selection-start-column="46" selection-end-line="116" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/task3/formNumber.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="18" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/task3/form.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="29" column="59" selection-start-line="29" selection-start-column="59" selection-end-line="29" selection-end-column="59" />
         </state>
       </provider>
     </entry>
