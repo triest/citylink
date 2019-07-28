@@ -134,29 +134,30 @@ function nalog($list, $interval)
             ($input_nach >= $begin and $input_okon <= $end)
             or
             ($input_nach >= $begin and $input_nach <= $end)
+            or //слуай когда начало меньше, а окончпние больше
+            ($input_nach < $begin and $input_okon > $end)
         ) {
-            echo $interval;
+            echo $value;
             echo "=> произошло наложение";
             echo "\r\n";
             $nalog = true;
 
         } else {
             /*добавляем в массив*/
-            echo $interval;
+            echo $value;
             echo "=> наложений нет";
             echo "\r\n";
-            //  array_push($list, $interval);
         }
-        /*теперь проверяем*/
     }
 
     if (!$nalog) {
-        echo "false";
         array_push($list, $interval);
     }
 
     //print_r($list);
     return $list;
 }
+
+nalog($list, "10:00-17:00")
 
 ?>
