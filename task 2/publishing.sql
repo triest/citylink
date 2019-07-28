@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Июл 25 2019 г., 00:47
+-- Время создания: Июл 28 2019 г., 19:09
 -- Версия сервера: 5.6.41
 -- Версия PHP: 7.2.10
 
@@ -38,8 +38,8 @@ CREATE TABLE `magazine` (
 --
 
 INSERT INTO `magazine` (`id`, `name`) VALUES
-(1, 'Мурзилка'),
-(5, 'Крокодил');
+(5, 'Крокодил'),
+(1, 'Мурзилка');
 
 -- --------------------------------------------------------
 
@@ -97,14 +97,16 @@ INSERT INTO `subscriptions` (`id`, `reader_id`, `magazine_id`) VALUES
 -- Индексы таблицы `magazine`
 --
 ALTER TABLE `magazine`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `name` (`name`);
 
 --
 -- Индексы таблицы `reader`
 --
 ALTER TABLE `reader`
   ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `reader_id` (`id`);
+  ADD UNIQUE KEY `reader_id` (`id`),
+  ADD UNIQUE KEY `name` (`name`);
 
 --
 -- Индексы таблицы `subscriptions`
